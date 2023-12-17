@@ -2,8 +2,17 @@ import kotlin.random.Random
 import sort_funs.*
 
 fun main() {
-    // Генерируем массив из 100 случайных чисел
-    val arrayToSort = IntArray(10) { Random.nextInt(1, 1000) }
+    // Ввод количества элементов в массиве
+    print("Введите количество элементов в массиве: ")
+    val size = readLine()?.toIntOrNull() ?: 0
+
+    if (size <= 0) {
+        println("Некорректный ввод. Пожалуйста, введите положительное число.")
+        return
+    }
+
+    // Генерируем массив из 'size' случайных чисел
+    val arrayToSort = IntArray(size) { Random.nextInt(1, 1000) }
 
     println("Исходный массив: ${arrayToSort.joinToString()}")
 
