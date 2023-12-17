@@ -21,4 +21,14 @@ fun main() {
     val arrayCopy3 = arrayToSort.clone()
     combSort(arrayCopy3)
     println("Отсортированный массив (сортировка расческой): ${arrayCopy3.joinToString()}")
+
+    // Создаем копию массива и сортируем массив сортировкой вставками
+    val arrayCopy4 = arrayToSort.clone()
+    insertionSort(arrayCopy4)
+    println("Отсортированный массив (сортировка вставками): ${arrayCopy4.joinToString()}")
+
+    // Создаем копию массива и сортируем массив сортировкой Шелла
+    val arrayCopy5 = arrayToSort.clone()
+    shellSort(arrayCopy5)
+    println("Отсортированный массив (сортировка Шелла): ${arrayCopy5.joinToString()}")
 }
